@@ -40,7 +40,7 @@ public class SmsService {
         // 4 params(to, from, type, text) are mandatory. must be filled
         HashMap<String, String> params = new HashMap<String, String>();
         params.put("to", phoneNumber);        // 수신전화번호
-        params.put("from", "010383523755");    // 발신전화번호. 테스트시에는 발신,수신 둘다 본인 번호로 하면 됨
+        params.put("from", "01038352375");    // 발신전화번호. 테스트시에는 발신,수신 둘다 본인 번호로 하면 됨
         params.put("type", "SMS");
         params.put("text", "Our neighborhood 휴대폰인증 메시지 : 인증번호는" + "[" + certifiedNumber + "]" + "입니다.");
 

@@ -226,7 +226,6 @@ var main = {
             }
         }).then((resp) => {
             let data = resp.data
-            console.log("data= ", data)
 
             if (data.last) {
                 let reviewMore = document.getElementById("review-more");
@@ -257,8 +256,9 @@ var main = {
                     "<br>" +
                     "<p>" + contentElement.content + "</p>" +
                     "<div>";
+
                 for (let uploadImgUrl of contentElement.uploadImgUrl) {
-                    if (uploadImgUrl !== "" && uploadImgUrl !== "https://neighbor-build.s3.ap-northeast-2.amazonaws.com/images/defaultImg.png") {
+                    if (uploadImgUrl != null && uploadImgUrl !== "https://neighbor-build.s3.ap-northeast-2.amazonaws.com/images/defaultImg.png") {
                         section.innerHTML += '<img src="' + uploadImgUrl + '" width="180" height="180" alt="리뷰 사진">';
                     }
                 }
