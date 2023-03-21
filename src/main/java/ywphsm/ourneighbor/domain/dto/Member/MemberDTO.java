@@ -168,12 +168,23 @@ public class MemberDTO {
 
         private UploadFile file;
 
-        @Builder
+
         public ApiAdd(Member member) {
             this.username = member.getUsername();
             this.role = member.getRole();
             this.email = member.getEmail();
             this.file = member.getFile();
+        }
+
+        @Builder
+        public ApiAdd(String username, String nickname, String birthDate, int gender, Role role, String email, UploadFile file) {
+            this.username = username;
+            this.nickname = nickname;
+            this.birthDate = birthDate;
+            this.gender = gender;
+            this.role = role;
+            this.email = email;
+            this.file = file;
         }
 
         public Member toEntity(int age) {

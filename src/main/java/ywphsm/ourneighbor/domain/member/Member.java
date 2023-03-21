@@ -64,7 +64,8 @@ public class Member extends BaseTimeEntity {
 
     // 생성 메소드
     @Builder
-    public Member(String userId, String password, String username, String nickname, String email, String phoneNumber, int age, int gender, Role role, String birthDate, UploadFile file) {
+    public Member(Long id, String userId, String password, String username, String nickname, String email, String phoneNumber, int age, int gender, Role role, String birthDate, UploadFile file) {
+        this.id = id;
         this.userId = userId;
         this.password = password;
         this.username = username;
